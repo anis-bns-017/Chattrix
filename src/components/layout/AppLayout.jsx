@@ -10,33 +10,31 @@ const AppLayout = () => (WrappedComponent) => {
         <Title />
         <Header />
 
-        <Grid sx={{ height: "calc(100vh - 4rem)", width: "100%" }}>
-          <Grid container height="100%">
-            <Grid
-              item
-              xs={4}
-              height="100%"
-              bgcolor="#1976d2"
-              p={2}
-              color="white"
-            >
-              First
-            </Grid>
-            <Grid
-              item
-              xs={4}
-              height="100%"
-              bgcolor="#9c27b0"
-              p={2}
-              color="white"
-            >
-              <WrappedComponent {...props} />
-            </Grid>
-            <Grid item xs={4} height="100%" bgcolor="#f5f5f5" p={2}>
-              Third
-            </Grid>
+        <Grid container sx={{ height: "calc(100vh - 4rem)" }}>
+          <Grid flex={4} sm={4} md={3} height={"100%"} sx={{
+            display: {
+              xs: "none",
+              sm: "block"
+            }
+          }} >
+            First
           </Grid>
-        </Grid>
+          <Grid flex={4} xs={12} sm={8} lg={6} height={"100%"}>
+            <WrappedComponent {...props} />
+          </Grid>
+          <Grid flex={4} md={4} lg={3} height={"100%"}
+            sx={{
+              display: {
+                xs: "none",
+                md: "block"
+              },
+              padding: "2rem",
+              bgcolor: "rgba(0, 0, 0, 0.85)"
+            }}
+          >
+            Third
+          </Grid >
+        </Grid >
       </>
     );
   };
