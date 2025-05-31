@@ -15,7 +15,7 @@ const ChatList = ({
   ],
   handleDeleteChat,
 }) => {
-  console.log("Wow: ", chats);
+ 
   return (
     <Stack width={w} direction={"column"}>
       {chats?.map((data, index) => {

@@ -5,6 +5,7 @@ import { Grid, Box } from "@mui/material";
 import ChatList from "../specific/ChatList";
 import { sampleChats } from "../constants/sampleData";
 import { useParams } from "react-router-dom";
+import Profile from "../specific/Profile";
 
 const AppLayout = () => (WrappedComponent) => {
   return (props) => {
@@ -14,8 +15,7 @@ const AppLayout = () => (WrappedComponent) => {
     const handleDeleteChat = (e, _id, groupChat) => {
       e.preventDefault();
       console.log("Delete Chat: ", _id, groupChat);
-    }
-   
+    };
 
     return (
       <>
@@ -65,7 +65,7 @@ const AppLayout = () => (WrappedComponent) => {
               bgcolor: "rgba(0, 0, 0, 0.85)",
             }}
           >
-            Third
+            <Profile />
           </Grid>
         </Grid>
       </>

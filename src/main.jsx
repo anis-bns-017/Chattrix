@@ -8,7 +8,8 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HelmetProvider>
       <CssBaseline />
-      <div onContextMenu={(e) => e.preventDefault()}>
+      {/* //onContextMenu={(e) => e.preventDefault()} */}
+      <div>
         <App />
       </div>
     </HelmetProvider>

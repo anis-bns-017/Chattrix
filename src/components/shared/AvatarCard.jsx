@@ -3,8 +3,7 @@ import React from "react";
 
 // Todo transform
 const AvatarCard = ({ avatar = [], max = 4 }) => {
-    console.log("Hey avatar: ", avatar);
-    
+
   return (
     <Stack direction={"row"} spacing={0.5}>
       <AvatarGroup max={max}>

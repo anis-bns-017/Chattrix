@@ -27,3 +27,16 @@ export const sampleChats = [
     members: ["1", "2"],
   },
 ];
+
+export const sampleUsers = [
+  {
+    avatar: [girlPhoto],
+    name: "Jakir Hossain",
+    _id: "1",
+  },
+  {
+    avatar: [girlPhoto],
+    name: "Mohammad Yeasin",
+    _id: "2",
+  },
+];
