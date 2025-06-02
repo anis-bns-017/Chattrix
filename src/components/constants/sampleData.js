@@ -40,3 +40,20 @@ export const sampleUsers = [
     _id: "2",
   },
 ];
+
+export const sampleNotifications = [
+  {
+    sender: {
+      avatar: [girlPhoto],
+      name: "Jakir Hossain",
+    },
+    _id: "1",
+  },
+  {
+    sender: {
+      avatar: [girlPhoto],
+      name: "Mohammad Yeasin",
+    },
+    _id: "2",
+  },
+];

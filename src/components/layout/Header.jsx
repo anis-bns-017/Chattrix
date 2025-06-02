@@ -105,7 +105,7 @@ const Header = () => {
 
               <IconBtn
                 title={"New Group"}
-                icon={<GroupIcon />}
+                icon={<AddIcon />}
                 onClick={openNewGroup}
               ></IconBtn>
 
