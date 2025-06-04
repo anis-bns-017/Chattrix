@@ -32,9 +32,7 @@ const NewGroup = () => {
   const submitHandler = () => {};
 
   const groupName = useInputValidation("");
-  const closeHandler = () => {
-
-  }
+  const closeHandler = () => {};
   return (
     <Dialog open onClose={closeHandler}>
       <Stack

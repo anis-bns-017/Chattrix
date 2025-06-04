@@ -10,6 +10,7 @@
 //   handleDeleteChatOpen,
 
 import girlPhoto from "../../assets/girl.jpg";
+import earthPhoto from "../../assets/earth.jpg";
 
 export const sampleChats = [
   {
@@ -55,5 +56,36 @@ export const sampleNotifications = [
       name: "Mohammad Yeasin",
     },
     _id: "2",
+  },
+];
+
+export const sampleMessage = [
+  {
+    attachments: [],
+    content: "Hey there, i am using Chattu",
+    _id: "asdfasdfa",
+    sender: {
+      _id: "user._id",
+      name: "Chaman",
+    },
+    chat: "chatId",
+    createdAt: "02-04-2025",
+  },
+
+  {
+    attachments: [
+      {
+        public_id: "asdfas 2",
+        url: earthPhoto,
+      },
+    ],
+    content: "",
+    _id: "asdfaaa",
+    sender: {
+      _id: "asdfasd",
+      name: "Chaman 2",
+    },
+    chat: "chatId",
+    createdAt: "03-22-2025",
   },
 ];

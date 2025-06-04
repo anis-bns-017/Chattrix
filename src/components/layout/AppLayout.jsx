@@ -48,11 +48,11 @@ const AppLayout = () => (WrappedComponent) => {
               handleDeleteChat={handleDeleteChat}
             />
           </Grid>
-          <Grid flex={4} xs={12} sm={8} lg={6} height={"100%"}>
+          <Grid flex={6} xs={12} sm={8} lg={6} height={"100%"}>
             <WrappedComponent {...props} />
           </Grid>
           <Grid
-            flex={4}
+            flex={3}
             md={4}
             lg={3}
             height={"100%"}
