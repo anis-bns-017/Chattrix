@@ -32,3 +32,51 @@ export const InputBox = styled("input")`
   border-radius: 1.5rem;
   background-color: ${grayColor};
 `;
+
+export const SearchField = styled("input")`
+  width: 20vmax;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: ${grayColor};
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+
+  &::placeholder {
+    color: #888;
+    opacity: 1;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px #1976d2;
+    background-color: #fff;
+  }
+`
+
+export const CurveButton = styled("button")`
+  border: none;
+  border-radius: 2rem;
+  background-color: #1976d2;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+
+  &:hover {
+    background-color: #1565c0;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
+  }
+
+  &:active {
+    background-color: #115293;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #1976d2;
+  }
+`;
