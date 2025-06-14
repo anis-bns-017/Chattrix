@@ -24,8 +24,10 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { bgGradient, matBlack } from "../components/constants/color";
 import { sampleChats, sampleUsers } from "../components/constants/sampleData";
 import AvatarCard from "../components/shared/AvatarCard";
-import { Link } from "../components/styles/StyleComponents";
 import UserItem from "../components/shared/UserItem";
+import { Link } from "../components/styles/StyleComponents";
+
+
 const ConfirmDeleteDialog = lazy(() =>
   import("../components/dialogs/ConfirmDeleteDialog")
 );
@@ -153,7 +155,7 @@ const Groups = () => {
         <>
           <TextField
             value={groupNameUpdatedValue}
-            onChange={(e) => groupNameUpdatedValue(e.target.value)}
+            onChange={(e) => setGroupNameUpdatedValue(e.target.value)}
           />
           <IconButton onClick={updateGroupName}>
             <DoneIcon />

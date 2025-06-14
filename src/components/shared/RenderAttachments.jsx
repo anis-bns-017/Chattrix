@@ -12,8 +12,11 @@ const RenderAttachments = (file, url) => {
         <img
           src={transformImage(url, 200)}
           alt="Attachment"
-          width={"200px"}
-          height={"150px"}
+          width={"250px"}
+          height={"50px"}
+          loading="lazy"
+          justifyContent="center"
+          alignItems="center"
           style={{
             objectFit: "contain",
           }}
