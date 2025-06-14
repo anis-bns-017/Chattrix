@@ -15,14 +15,20 @@ const MessageComponent = ({ message, user }) => {
       justifyContent={sameSender ? "flex-end" : "flex-start"}
       sx={{ mb: 1, px: 1 }}
     >
-      <Box sx={{ display: "flex", flexDirection: "column", alignItems: sameSender ? "flex-end" : "flex-start" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: sameSender ? "flex-end" : "flex-start",
+        }}
+      >
         <Paper
           elevation={3}
           sx={{
-            bgcolor: sameSender ? "blue" : "grey.100",
-            color: sameSender ? "primary.contrastText" : "text.primary",
-            borderRadius: 2,
-            px: 2,
+            bgcolor: "grey.100",
+            color: "text.primary",
+
+            px: 1,
             py: 1,
             maxWidth: 350,
             position: "relative",
@@ -51,16 +57,24 @@ const MessageComponent = ({ message, user }) => {
             }}
           />
           {!sameSender && (
-            <Typography color="secondary" fontWeight={600} variant="subtitle2" sx={{ mb: 0.5 }}>
+            <Typography
+              color="secondary"
+              fontWeight={600}
+              variant="subtitle2"
+              sx={{ mb: 0.5 }}
+            >
               {sender.name}
             </Typography>
           )}
-          {content && <Typography sx={{ wordBreak: "break-word" }}>{content}</Typography>}
+          {content && (
+            <Typography sx={{ wordBreak: "break-word" }}>{content}</Typography>
+          )}
           {attachments.length > 0 && (
             <Stack spacing={0.5} sx={{ mt: 1 }}>
               {attachments.map((attachment, index) => {
                 const url = attachment.url;
                 const file = fileFormat(url);
+                console.log("Attachment file:", file);
                 return (
                   <Box key={index}>
                     <a
@@ -69,14 +83,18 @@ const MessageComponent = ({ message, user }) => {
                       download
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
-                      {RenderAttachments(file, url)}
+                      {<RenderAttachments type={file} url={url} />}
                     </a>
                   </Box>
                 );
               })}
             </Stack>
           )}
-          <Typography variant="caption" color="text.secondary" sx={{ mt: 0.5, display: "block", textAlign: "right" }}>
+          <Typography
+            variant="caption"
+            color="text.secondary"
+            sx={{ mt: 0.5, display: "block", textAlign: "right" }}
+          >
             {timeAgo}
           </Typography>
         </Paper>

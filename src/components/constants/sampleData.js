@@ -86,7 +86,7 @@ export const sampleMessage = [
         url: earthPhoto,
       },
     ],
-    content: "",
+    content: "Hey there",
     _id: "asdfaaa",
     sender: {
       _id: "asdfasd",
@@ -98,7 +98,7 @@ export const sampleMessage = [
 
   {
     attachments: [],
-    content: "kon baler jibon niye achi vai!!",
+    content: "kon baler jibon niye achi vai!! lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     _id: "asdfasdfa",
     sender: {
       _id: "user._id",
@@ -106,6 +106,20 @@ export const sampleMessage = [
     },
     chat: "chatId",
     createdAt: "02-04-2025",
+  },
+
+  {
+    attachments: [
+       
+    ],
+    content: "Hey There, I wanna be a software engineer",
+    _id: "asdfaaa",
+    sender: {
+      _id: "asdfasd",
+      name: "Chaman 2",
+    },
+    chat: "chatId",
+    createdAt: "03-22-2025",
   },
 ];
 
